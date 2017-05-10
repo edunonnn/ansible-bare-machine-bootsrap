@@ -1,0 +1,16 @@
+---
+#
+# Execute command:
+# ansible-playbook work-base-utils.yml -vvv --ask-sudo-pass
+#
+- name: Setup basic utilities for my work environment
+  hosts: x230-i5
+  sudo: True
+  tasks:
+    - name: Install fundamental packages
+      apt:
+        name:
+          - build-essential
+          - vim
+          - stow # stow is local built package management
+        update_cache: yes

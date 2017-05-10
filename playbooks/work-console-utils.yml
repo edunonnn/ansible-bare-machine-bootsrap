@@ -1,0 +1,26 @@
+---
+#
+# Execute command:
+# ansible-playbook work-console-utils.yml -vvv --ask-sudo-pass
+#
+- name: Setup Console utilities
+  hosts: x230-i5
+  sudo: True
+  vars:
+    ser2net_conf_file: /etc/ser2net.conf
+  tasks:
+    - name: Install console packages
+      apt: name=ser2net update_cache=yes # redirect serial port to telnet
+
+    - name: Copy ser2net config file
+      copy: src=files/ser2net.conf dest={{ ser2net_conf_file }} owner=root mode=600
+      notify: restart ser2net
+
+    # We use another method(notify and handlers) to restart ser2net
+    # But they have the same result
+    # - name: Restart ser2net
+    #   service: name=ser2net state=restarted
+
+  handlers:
+    - name: restart ser2net
+      service: name=ser2net state=restarted
