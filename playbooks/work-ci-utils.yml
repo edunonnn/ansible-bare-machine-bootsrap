@@ -1,0 +1,19 @@
+---
+#
+# Execute command:
+# ansible-playbook work-ci-utils.yml -vvv --ask-sudo-pass
+#
+- name: Setup CI(Continuous Integration) utilities
+  hosts: x230-i5
+  sudo: True
+  tasks:
+    - name: Install required packages
+      apt:
+        name:
+          - python-pip
+          - libssl-dev
+        update_cache: yes
+
+    - name: Install ansible
+      pip:
+        name: ansible
