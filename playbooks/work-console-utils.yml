@@ -14,13 +14,19 @@
 
     - name: Copy ser2net config file
       copy: src=files/ser2net.conf dest={{ ser2net_conf_file }} owner=root mode=600
-      notify: restart ser2net
+      # notify: restart ser2net # See the example
 
-    # We use another method(notify and handlers) to restart ser2net
-    # But they have the same result
-    # - name: Restart ser2net
-    #   service: name=ser2net state=restarted
-
-  handlers:
-    - name: restart ser2net
+    - name: Restart ser2net
       service: name=ser2net state=restarted
+
+  #
+  # Here is just an example for Ansible module 'notify' and 'handlers'
+  #
+  # The 'handlers' will execute only once after all tasks finished
+  # And the execution order is 'handlers' in playbook not 'notify'
+  #
+  # The suggestion not to use 'handlers' for simple job
+  #
+  # handlers:
+  #   - name: restart ser2net
+  #     service: name=ser2net state=restarted
