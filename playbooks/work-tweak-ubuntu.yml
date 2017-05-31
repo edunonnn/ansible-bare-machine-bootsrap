@@ -1,0 +1,24 @@
+---
+#
+# Execute command:
+# ansible-playbook work-tweak-ubuntu.yml -vvv --ask-sudo-pass
+#
+- name: Tweak Ubuntu for my work environment
+  hosts: x230-i5
+  sudo: True
+  tasks:
+    - name: Adjust Unity HUD size
+      command: dbus-launch gsettings set org.compiz.unityshell:/org/compiz/profiles/unity/plugins/unityshell/ icon-size 32
+      become_user: nonnn
+
+    - name: Disable ALT key to show HUD
+      command: dbus-launch gsettings set org.compiz.integrated show-hud '[""]'
+      become_user: nonnn
+
+    - name: Install Chinese fonts
+      apt:
+        name:
+          - fonts-arphic-ukai
+          - fonts-arphic-uming
+          - fonts-droid-fallback
+        update_cache: yes
