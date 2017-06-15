@@ -1,4 +1,7 @@
 ---
+# Installation Packages:
+# ansible
+# virtualbox
 #
 # Execute command:
 # ansible-playbook work-ci-utils.yml -vvv --ask-sudo-pass
@@ -17,3 +20,17 @@
     - name: Install ansible
       pip:
         name: ansible
+
+    # VirtualBox
+    - name: Add VirtualBox repository
+      apt_repository:
+        repo: "deb http://download.virtualbox.org/virtualbox/debian xenial contrib"
+
+    - name: Add VirtualBox secure key
+      apt_key:
+        url: "https://www.virtualbox.org/download/oracle_vbox.asc"
+
+    - name: Install VirtualBox
+      apt:
+        name: virtualbox-5.1
+        update_cache: yes
