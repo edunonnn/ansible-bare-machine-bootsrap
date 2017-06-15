@@ -1,0 +1,13 @@
+# Installation Packages
+# shutter: Screen Capture
+---
+#
+# Execute command:
+# ansible-playbook work-misc-utils.yml -vvv --ask-sudo-pass
+#
+- name: Setup miscellaneous utilities for my work environment
+  hosts: x230-i5
+  sudo: True
+  tasks:
+    - name: Install screen capture packages
+      apt: name=shutter update_cache=yes
