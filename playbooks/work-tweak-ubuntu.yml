@@ -22,3 +22,10 @@
           - fonts-arphic-uming
           - fonts-droid-fallback
         update_cache: yes
+
+    - name: Install Chinese input
+      apt:
+        name:
+          - fcitx
+          - fcitx-table-boshiamy
+        update_cache: yes
