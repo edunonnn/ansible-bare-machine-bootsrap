@@ -33,6 +33,12 @@
           - fonts-droid-fallback
         update_cache: yes
 
+    # Manual Steps:
+    # System Settings -> Language Support ->
+    # 1. change input method to 'fcitx'
+    # 2. Install 'Chinese' and Apply then Re-login
+    # 3. On top of menu bar -> keyboard icon (fcitx) -> Configuration
+    #    -> Input Method -> Liu
     - name: Install Chinese input
       apt:
         name:
