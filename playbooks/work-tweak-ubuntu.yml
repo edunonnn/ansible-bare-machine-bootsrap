@@ -15,6 +15,13 @@
       command: dbus-launch gsettings set org.compiz.integrated show-hud '[""]'
       become_user: nonnn
 
+    # Manual Steps:
+    # CompizConfig Settings -> Unity Ubuntu Plugin -> Desktop -> Ubuntu Unity Plugin"
+    # 1. Clean "Key to show the menu bar while pressed"
+    # 2. Clean "Key to show the HUD when tapped"
+    - name: Disable ALT key to show menu bar
+      apt: name=compizconfig-settings-manager update_cache=yes
+
     - name: Install Chinese fonts
       apt:
         name:
