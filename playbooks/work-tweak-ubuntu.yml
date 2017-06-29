@@ -11,8 +11,11 @@
       command: dbus-launch gsettings set org.compiz.unityshell:/org/compiz/profiles/unity/plugins/unityshell/ icon-size 32
       become_user: nonnn
 
+    # FIXME:
+    # This action is not working. Because it should get DBUS_SESSION_BUS_ADDRESS
+    # to execute command with exist dbus session
     - name: Disable ALT key to show HUD
-      command: dbus-launch gsettings set org.compiz.integrated show-hud '[""]'
+      command: dbus-launch --exit-with-session gsettings set org.compiz.integrated show-hud "['disabled']"
       become_user: nonnn
 
     # Manual Steps:
