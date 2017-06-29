@@ -36,3 +36,12 @@
           - fcitx
           - fcitx-table-boshiamy
         update_cache: yes
+
+    # Manual Steps:
+    # gnome-control-center -> online accounts -> Add account Google
+    - name: Sync. with Google Drive
+      apt:
+        name:
+          - gnome-control-center
+          - gnome-online-accounts
+        update_cache: yes
