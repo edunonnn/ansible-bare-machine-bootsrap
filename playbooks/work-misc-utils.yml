@@ -20,3 +20,6 @@
         dest: ~/
         remote_src: True
       become_user: nonnn
+
+    - name: Install Audacity
+      apt: name=audacity update_cache=yes
