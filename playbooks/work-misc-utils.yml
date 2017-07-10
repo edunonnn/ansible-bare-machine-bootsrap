@@ -23,3 +23,11 @@
 
     - name: Install Audacity
       apt: name=audacity update_cache=yes
+
+    - name: Get Smart Scope deb package
+      command: wget --trust-server-names https://www.lab-nation.com/package/smartscope/linux/latest/get -O /tmp/SmartScope-Linux.deb
+      become_user: nonnn
+
+    - name: Install Smart Scope
+      apt:
+        deb: /tmp/SmartScope-Linux.deb
