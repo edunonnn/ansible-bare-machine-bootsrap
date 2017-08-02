@@ -2,6 +2,7 @@
 # Install Packages:
 # ansible
 # virtualbox
+# vagrant
 #
 # Execute command:
 # ansible-playbook work-ci-utils.yml -vvv --ask-sudo-pass
@@ -10,7 +11,8 @@
   hosts: x230-i5
   become: true
   tasks:
-    - name: Install required packages
+    # Ansible
+    - name: Install ansible required packages
       apt:
         name:
           - python-pip
