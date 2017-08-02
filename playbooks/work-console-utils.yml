@@ -5,7 +5,7 @@
 #
 - name: Setup Console utilities
   hosts: x230-i5
-  sudo: True
+  become: true
   vars:
     ser2net_conf_file: /etc/ser2net.conf
   tasks:

@@ -8,7 +8,7 @@
 #
 - name: Setup CI(Continuous Integration) utilities
   hosts: x230-i5
-  sudo: True
+  become: true
   tasks:
     - name: Install required packages
       apt:

@@ -7,7 +7,7 @@
 #
 - name: Setup Web utilities for my work environment
   hosts: x230-i5
-  sudo: True
+  become: true
   tasks:
     - name: Install Opera
       apt:
