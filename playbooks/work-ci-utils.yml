@@ -34,3 +34,12 @@
       apt:
         name: virtualbox-5.1
         update_cache: yes
+
+    # Vagrant
+    - name: Download Vagrant
+      get_url:
+        url: https://releases.hashicorp.com/vagrant/1.9.7/vagrant_1.9.7_x86_64.deb
+        dest: /tmp/vagrant.deb
+
+    - name: Install Vagrant
+      apt: deb=/tmp/vagrant.deb
