@@ -1,0 +1,11 @@
+---
+# tasks file for work-essential
+  - name: Install essential packages
+    apt:
+      name:
+        - build-essential
+        - vim
+        - stow # stow is local built package management
+        - tree
+        - htop
+      update_cache: yes

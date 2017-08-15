@@ -1,0 +1,15 @@
+# file: production servers
+
+# The hosts variables can also put in host_vars
+ansible_ssh_host_key_checking=False
+#ansible_ssh_port=22
+
+[x230-i5]
+10.20.60.117
+
+[x230-i5:vars]
+ansible_ssh_user=nonnn
+ansible_ssh_private_key_file=~/.ssh/id_rsa
+
+[work-stations:children]
+x230-i5
