@@ -8,4 +8,6 @@
         - stow # stow is local built package management
         - tree
         - htop
+        - git
+        - git-extras
       update_cache: yes
