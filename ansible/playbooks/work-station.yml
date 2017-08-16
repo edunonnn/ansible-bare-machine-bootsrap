@@ -1,6 +1,12 @@
 ---
 # Install and setup essential utilities for work station
 #
+# Requisites:
+# 1. Install Roles
+#
+# cd <directory_contains_requirements.yml>
+# ansible-galaxy install -r requirements.yml
+#
 # Execute command:
 # ansible-playbook work-station.yml --ask-sudo-pass
 #
@@ -8,3 +14,12 @@
   become: true
   roles:
     - { role: work-essential, become: yes }
+    - role: vaulttec.zsh
+      zsh_ohmy_theme: bira
+      zsh_ohmy_plugins:
+        - git
+        - gitfast
+        - git-extras
+        - zsh-syntax-highlighting
+        - zsh-autosuggestions
+        - history-substring-search
