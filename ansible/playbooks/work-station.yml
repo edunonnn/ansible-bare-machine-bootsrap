@@ -23,3 +23,6 @@
         - zsh-syntax-highlighting
         - zsh-autosuggestions
         - history-substring-search
+    - role: edunonnn.emacs-build
+      emacs_build_ver: '25.2'
+      emacs_install_dir: '/usr/local/stow/emacs-{{ emacs_build_ver }}'

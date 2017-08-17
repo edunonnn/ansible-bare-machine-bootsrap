@@ -1,3 +1,7 @@
 ---
 # Zsh and Oh-my-zsh
 - src: vaulttec.zsh
+
+# Build emacs from source
+- src: https://github.com/edunonnn/ansible-emacs-build
+  name: edunonnn.emacs-build
