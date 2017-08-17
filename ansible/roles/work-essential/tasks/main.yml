@@ -1,13 +1,16 @@
 ---
 # tasks file for work-essential
   - name: Install essential packages
+    become: yes
     apt:
-      name:
+      name: '{{ item }}'
+      state: present
+      update_cache: yes
+    with_items:
         - build-essential
         - vim
-        - stow # stow is local built package management
+        - xstow # xstow is manual-built package management tool
         - tree
         - htop
         - git
         - git-extras
-      update_cache: yes
