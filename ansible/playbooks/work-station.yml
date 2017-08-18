@@ -26,3 +26,4 @@
     - role: edunonnn.emacs-build
       emacs_build_ver: '25.2'
       emacs_install_dir: '/usr/local/stow/emacs-{{ emacs_build_ver }}'
+    - { role: edunonnn.stow-install-packag, stow_install_package: 'emacs-{{ emacs_build_ver }}' }
