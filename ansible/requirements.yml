@@ -1,7 +1,18 @@
 ---
+# Usage:
+#       ansible-galaxy install -r requirements.yml
+#
+- src: https://github.com/edunonnn/ansible-role-work-essential.git
+  name: edunonnn.work-essential
+
 # Zsh and Oh-my-zsh
-- src: vaulttec.zsh
+- src: https://github.com/edunonnn/ansible-role-zsh
+  name: vaulttec.zsh
 
 # Build emacs from source
 - src: https://github.com/edunonnn/ansible-emacs-build
   name: edunonnn.emacs-build
+
+# Use xstow to install manual built package
+- src: https://github.com/edunonnn/ansible-role-stow-install-package.git
+  name: edunonnn.stow-install-package
