@@ -1,7 +1,7 @@
 # file: production servers
 
 # The hosts variables can also put in host_vars
-ansible_ssh_host_key_checking=False
+ansible_ssh_common_args='-o StrictHostKeyChecking=no'
 #ansible_ssh_port=22
 
 [x230-i5]
