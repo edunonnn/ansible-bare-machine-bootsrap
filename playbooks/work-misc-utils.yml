@@ -31,3 +31,6 @@
     - name: Install Smart Scope
       apt:
         deb: /tmp/SmartScope-Linux.deb
+
+    - name: Install screen capture packages
+      apt: name=okular update_cache=yes
