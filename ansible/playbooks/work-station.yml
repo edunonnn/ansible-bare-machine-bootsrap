@@ -13,8 +13,8 @@
 - hosts: work-stations
   become: true
   roles:
-    - { role: work-essential, become: yes }
-    - role: vaulttec.zsh
+    - { role: edunonnn.work-essential, become: yes }
+    - role: edunonnn.zsh
       zsh_ohmy_theme: bira
       zsh_ohmy_plugins:
         - git

@@ -7,7 +7,7 @@
 
 # Zsh and Oh-my-zsh
 - src: https://github.com/edunonnn/ansible-role-zsh
-  name: vaulttec.zsh
+  name: edunonnn.zsh
 
 # Build emacs from source
 - src: https://github.com/edunonnn/ansible-emacs-build
