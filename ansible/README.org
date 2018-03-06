@@ -1,0 +1,21 @@
+* Provision node
+
+  1. Add host in ~production~
+
+     #+BEGIN_SRC
+     [my-pc]
+     192.168.1.2
+
+     [my-pc]
+     ansible_ssh_user=username
+     ansible_ssh_private_key_file=~/.ssh/id_rsa
+
+     [work-stations:children]
+     my-pc
+     #+END_SRC
+
+  2. Execute ansible to provision node
+
+     #+BEGIN_SRC shell
+     ansible-playbook -vvv playbooks/work-station.yml --ask-sudo-pass
+     #+END_SRC
