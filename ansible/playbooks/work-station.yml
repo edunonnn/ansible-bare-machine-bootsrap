@@ -12,6 +12,8 @@
 #
 - hosts: work-stations
   become: true
+  vars:
+    emacs_build_ver: '25.3'
   roles:
     - { role: edunonnn.work-essential, become: yes }
     - role: edunonnn.zsh
@@ -24,7 +26,6 @@
         - zsh-autosuggestions
         - history-substring-search
     - role: edunonnn.emacs-build
-      emacs_build_ver: '25.2'
       emacs_install_dir: '/usr/local/stow/emacs-{{ emacs_build_ver }}'
     - role: edunonnn.stow-install-package
       stow_install_package: 'emacs-{{ emacs_build_ver }}'
