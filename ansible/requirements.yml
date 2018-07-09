@@ -16,3 +16,7 @@
 # Use xstow to install manual built package
 - src: https://github.com/edunonnn/ansible-role-stow-install-package.git
   name: edunonnn.stow-install-package
+
+# Install tmux 2.0
+- src: https://github.com/trinitronx/ansible-role-tmux
+  name: trinitronx.tmux

@@ -29,3 +29,4 @@
       emacs_install_dir: '/usr/local/stow/emacs-{{ emacs_build_ver }}'
     - role: edunonnn.stow-install-package
       stow_install_package: 'emacs-{{ emacs_build_ver }}'
+    - role: trinitronx.tmux
