@@ -14,7 +14,13 @@
      my-pc
      #+END_SRC
 
-  2. Execute ansible to provision node
+  2. Install Requirements
+
+     #+BEGIN_SRC shell
+     ansible-galaxy install -r requirements.yml
+     #+END_SRC
+
+  3. Execute ansible to provision node
 
      #+BEGIN_SRC shell
      ansible-playbook -vvv playbooks/work-station.yml --ask-sudo-pass
