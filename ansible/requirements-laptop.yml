@@ -1,0 +1,6 @@
+---
+# Usage:
+#       ansible-galaxy install -r requirements-laptop.yml
+#
+- src: https://github.com/edunonnn/ansible-spotify
+  name: edunonnn.spotify

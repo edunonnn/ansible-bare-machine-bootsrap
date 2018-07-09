@@ -19,5 +19,15 @@ ansible_ssh_user=ubuntu
 ansible_ssh_port=2222
 ansible_ssh_private_key_file=~/Vagrant/ubuntu-16.04/.vagrant/machines/default/virtualbox/private_key
 
+[t480]
+192.168.1.5
+
+[t480:vars]
+ansible_ssh_user=sherman_hsu
+ansible_ssh_private_key_file=~/.ssh/id_rsa-ubnt
+
 [work-stations:children]
 x230-i5
+
+[laptop:children]
+t480

@@ -1,0 +1,18 @@
+---
+# Install and setup essential utilities for laptop
+# - GUI version applications
+# - Entertainment applications
+#
+# Requisites:
+# Install Roles
+#
+# cd <directory_contains_requirements.yml>
+# ansible-galaxy install -r requirements-laptop.yml
+#
+# Execute command:
+# ansible-playbook laptop.yml --ask-sudo-pass
+#
+- hosts: laptop
+  become: true
+  roles:
+    - role: edunonnn.spotify
