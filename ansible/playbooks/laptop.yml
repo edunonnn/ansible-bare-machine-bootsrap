@@ -16,3 +16,4 @@
   become: true
   roles:
     - role: edunonnn.spotify
+    - role: edunonnn.skypeforlinux

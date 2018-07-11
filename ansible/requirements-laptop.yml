@@ -4,3 +4,5 @@
 #
 - src: https://github.com/edunonnn/ansible-spotify
   name: edunonnn.spotify
+- src: https://github.com/edunonnn/ansible-role-skypeforlinux
+  name: edunonnn.skypeforlinux
