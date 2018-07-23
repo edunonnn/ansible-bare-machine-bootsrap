@@ -2,6 +2,8 @@
 # Usage:
 #       ansible-galaxy install -r requirements-laptop.yml
 #
+- src: https://github.com/edunonnn/ansible-role-desktop-extra
+  name: edunonnn.desktop-extra
 - src: https://github.com/edunonnn/ansible-spotify
   name: edunonnn.spotify
 - src: https://github.com/edunonnn/ansible-role-skypeforlinux

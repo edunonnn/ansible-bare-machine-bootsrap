@@ -15,5 +15,6 @@
 - hosts: laptop
   become: true
   roles:
+    - role: edunonnn.desktop-extra
     - role: edunonnn.spotify
     - role: edunonnn.skypeforlinux
