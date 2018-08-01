@@ -20,3 +20,7 @@
 # Install tmux 2.0
 - src: https://github.com/trinitronx/ansible-role-tmux
   name: trinitronx.tmux
+
+# Chrome
+- src: https://github.com/cmprescott/ansible-role-chrome
+  name: cmprescott.chrome

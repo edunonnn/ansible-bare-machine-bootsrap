@@ -18,3 +18,4 @@
     - role: edunonnn.desktop-extra
     - role: edunonnn.spotify
     - role: edunonnn.skypeforlinux
+    - { role: cmprescott.chrome, become: yes }
