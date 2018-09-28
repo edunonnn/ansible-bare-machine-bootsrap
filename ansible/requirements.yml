@@ -24,3 +24,7 @@
 # Chrome
 - src: https://github.com/cmprescott/ansible-role-chrome
   name: cmprescott.chrome
+
+# Docker
+- src: https://github.com/geerlingguy/ansible-role-docker
+  name: geerlingguy.docker

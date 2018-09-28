@@ -30,3 +30,4 @@
     - role: edunonnn.stow-install-package
       stow_install_package: 'emacs-{{ emacs_build_ver }}'
     - role: trinitronx.tmux
+    - role: geerlingguy.docker
