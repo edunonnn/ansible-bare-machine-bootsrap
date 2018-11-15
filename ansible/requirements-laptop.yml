@@ -8,3 +8,11 @@
   name: edunonnn.spotify
 - src: https://github.com/edunonnn/ansible-role-skypeforlinux
   name: edunonnn.skypeforlinux
+
+  # Build emacs from source
+- src: https://github.com/edunonnn/ansible-emacs-build
+  name: edunonnn.emacs-build
+
+# Use xstow to install manual built package
+- src: https://github.com/edunonnn/ansible-role-stow-install-package.git
+  name: edunonnn.stow-install-package

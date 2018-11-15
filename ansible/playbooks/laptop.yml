@@ -14,8 +14,27 @@
 #
 - hosts: laptop
   become: true
+  vars:
+    emacs_build_ver: '26.1'
+    emacs_build_options: ''
   roles:
-    - role: edunonnn.desktop-extra
-    - role: edunonnn.spotify
-    - role: edunonnn.skypeforlinux
-    - { role: cmprescott.chrome, become: yes }
+    # - role: edunonnn.desktop-extra
+    # - role: edunonnn.spotify
+    # - role: edunonnn.skypeforlinux
+    # - { role: cmprescott.chrome, become: yes }
+
+    # TODO: adds dependencies: libx11-dev and others
+    # - role: edunonnn.emacs-build
+    #   emacs_install_dir: '/usr/local/stow/emacs-{{ emacs_build_ver }}'
+    # - role: edunonnn.stow-install-package
+    #   stow_install_package: 'emacs-{{ emacs_build_ver }}'
+    - role: edunonnn.zsh
+      zsh_ohmy_theme: bira
+      zsh_ohmy_plugins:
+        - git
+        - gitfast
+        - git-extras
+        - zsh-syntax-highlighting
+        - zsh-autosuggestions
+        - history-substring-search
+    - role: trinitronx.tmux
