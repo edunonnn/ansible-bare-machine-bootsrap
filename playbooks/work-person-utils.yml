@@ -1,0 +1,17 @@
+---
+# Install Packages:
+# Dropbox
+#
+# Execute command:
+# ansible-playbook work-person-utils.yml -vvv --ask-sudo-pass
+#
+- name: Setup personal utilities for my work environment
+  hosts: x230-i5
+  tasks:
+    - name: Install Dropbox
+      # cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
+      unarchive:
+        src: https://www.dropbox.com/download?plat=lnx.x86_64
+        dest: ~/
+        remote_src: True
+      become_user: nonnn

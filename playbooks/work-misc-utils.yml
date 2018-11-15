@@ -1,7 +1,6 @@
 ---
 # Install Packages:
 # shutter: Screen Capture
-# Dropbox
 #
 # Execute command:
 # ansible-playbook work-misc-utils.yml -vvv --ask-sudo-pass
@@ -12,14 +11,6 @@
   tasks:
     - name: Install screen capture packages
       apt: name=shutter update_cache=yes
-
-    - name: Install Dropbox
-      # cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
-      unarchive:
-        src: https://www.dropbox.com/download?plat=lnx.x86_64
-        dest: ~/
-        remote_src: True
-      become_user: nonnn
 
     - name: Install Audacity
       apt: name=audacity update_cache=yes
@@ -32,5 +23,5 @@
       apt:
         deb: /tmp/SmartScope-Linux.deb
 
-    - name: Install screen capture packages
+    - name: Install PDF editor packages
       apt: name=okular update_cache=yes
