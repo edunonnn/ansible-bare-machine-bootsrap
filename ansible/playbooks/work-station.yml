@@ -14,6 +14,7 @@
   become: true
   vars:
     emacs_build_ver: '25.3'
+    emacs_build_options: '--with-x=no'
   roles:
     - { role: edunonnn.work-essential, become: yes }
     - role: edunonnn.zsh
